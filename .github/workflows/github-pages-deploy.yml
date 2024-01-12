@@ -60,7 +60,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://xilophor.github.io/LethalNetworkAPI/
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
