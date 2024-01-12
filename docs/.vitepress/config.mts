@@ -2,7 +2,7 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    base: "/LethalNetworkAPI/",
+    base: "/lethal-network-api-docs/",
     lang: 'en-US',
     title: "LethalNetworkAPI Wiki",
     description: "How to use the LethalNetworkingAPI.",
