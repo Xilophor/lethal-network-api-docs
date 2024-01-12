@@ -8,8 +8,12 @@ description: How to reference and use LethalNetworkAPI.
 
 ## Via NuGet (Recommended) {#nuget}
 
-to be written
+Add the following line to your `.csproj` file:
 
-## Via the .dll {#dll}
+```xml
+<PackageReference Include="Xilophor.LethalNetworkAPI" Version="1.*" PrivateAssets="all"/>
+```
 
-to be written
+## Via the `.dll` {#dll}
+
+Add a reference to the dll assembly.
