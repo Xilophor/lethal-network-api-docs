@@ -6,7 +6,7 @@ description: How to use LethalNetworkAPI's Network Variables.
 
 # Network Variable Usage
 
-Network Variables sync data between the server and all clients. They can be modified by the server or any client, [unless given ownership/protection](/variables/ownership).
+Network Variables sync data between the server and all clients.
 
 They automatically sync when joining the server, and thus are great for consistent information.
 
