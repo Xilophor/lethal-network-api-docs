@@ -31,8 +31,7 @@ export default defineConfig({
                 ]
             },
             { text: 'Network Variables', items: [
-                    { text: 'Usage', link: '/variables/usage' },
-                    { text: 'Ownership', link: '/variables/ownership' },
+                    { text: 'Usage', link: '/variables/usage' }
                 ]
             },
             { text: 'Extensions', link: '/extensions' },
