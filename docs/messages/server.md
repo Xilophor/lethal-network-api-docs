@@ -31,7 +31,7 @@ LethalServerMessage customServerMessage = new LethalServerMessage<TData>(identif
 - `Vector3`
 - `Color`
 
-You can also add `[Serializable]` before a class to mark it as serializable. For more information, please visit [Unity's Serialization docs](https://docs.unity3d.com/Manual/script-Serialization.html).
+You can also add `[Serializable]` before a class to mark it as serializable.
 
 :::tip NOTE
 This identifier will be shared between server and client messages of the mod.

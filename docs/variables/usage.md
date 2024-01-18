@@ -1,6 +1,6 @@
 ﻿---
 prev: false
-next: true
+next: false
 description: How to use LethalNetworkAPI's Network Variables.
 ---
 
@@ -10,13 +10,13 @@ Network Variables sync data between the server and all clients. They can be modi
 
 They automatically sync when joining the server, and thus are great for consistent information.
 
-## Constructor
+## Creating the Variable
+
+There are two ways to make a new network variable, through the constructor or through a helper extension method.
+
+Using the constructor will create a server-owned variable, or if marked, a publicly-owned variable. On the other hand, using one of the helper methods, a client-owned network variable - owned by the client owning the object/behaviour.
 
 To make a new network variable, there are two pieces of information required: the `identifier` and the `type` of the variable.
-
-```csharp
-LethalNetworkVariable customVariable = new LethalNetworkVariable<TData>(identifier: "customIdentifier");
-```
 
 `TData` is the type of messages, which can be any serializable type. Examples of serializable types are:
 
@@ -25,7 +25,7 @@ LethalNetworkVariable customVariable = new LethalNetworkVariable<TData>(identifi
 - `Vector3`
 - `Color`
 
-You can also add `[Serializable]` before a class to mark it as serializable. For more information, please visit [Unity's Serialization docs](https://docs.unity3d.com/Manual/script-Serialization.html).
+You can also add `[Serializable]` before a class to mark it as serializable.
 
 :::tip NOTE
 This identifier will be shared between all instances of network variables in the mod.
@@ -33,11 +33,42 @@ This identifier will be shared between all instances of network variables in the
 Any other mods with the same identifier or any messages or events of the same identifier will not interact with your variable.
 :::
 
+### Constructor
+
+Using the constructor is simple:
+
+```csharp
+public static LethalNetworkVariable customVariable = new LethalNetworkVariable<TData>(identifier: "customIdentifier");
+```
+
 If you want to set a value to the network variable while initializing it, you can use object initializers:
 
 ```csharp
-LethalNetworkVariable customString = new LethalNetworkVariable<string>("customString") { Value = "Hello, World!" };
+public static LethalNetworkVariable customString = new LethalNetworkVariable<string>("customString") { Value = "Hello, World!" };
 ```
+
+### Helper Method
+
+You can use `.NetworkVariable<T>(identifier)` on any Network Object or Network Behaviour. This will create a new network variable owned by that object, or get the network variable if it already exists.
+
+```csharp
+ForestGiantAI instance;
+
+LethalNetworkVariable<string> customString = instance.NetworkVariable<string>("customString");
+```
+
+Using this method, variable values will only sync if the host client has created an instance of the variable by using the method as well.
+
+### Ownership
+
+As mentioned earlier, variables made with the constructor can be made public. It's as simple as adding the `[PublicNetworkVariable]` attribute to the field.
+
+```csharp
+[PublicNetworkVariable]
+public static LethalNetworkVariable customVariable = new LethalNetworkVariable<TData>(identifier: "customIdentifier");
+```
+
+Doing so will allow any client to modify the variable.
 
 ## Getting/Setting the Value
 
@@ -65,7 +96,7 @@ There is a `OnValueChanged` event that runs when the value is changed. The follo
 - When a variable is updated over the network
   - This only happens every Network Tick; the following is taken (and adjusted) from [Unity's NGO docs](https://docs-multiplayer.unity3d.com/netcode/1.5.2/learn/rpcvnetvar/#choosing-between-networkvariables-or-rpcs).
 
-![NetworkVariable Network Tick Explaination](/public/variables/usage/networktick.png)
+![NetworkVariable Network Tick Explanation](/public/variables/usage/networktick.png)
 
 The `OnValueChanged` event is invoked with the parameter `TData data`, where `TData` is the type specified in the [constructor](#constructor).
 
