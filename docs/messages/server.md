@@ -21,17 +21,17 @@ Any clients attempting to send messages from the server message class will resul
 Two things need to be specified for constructing messages, the identifier and the `type` of the data transmitted.
 
 ```csharp
-LethalServerMessage customServerMessage = new LethalServerMessage<TData>(identifier: "customIdentifier");
+LethalServerMessage<TData> customServerMessage = new LethalServerMessage<TData>(identifier: "customIdentifier");
 ```
 
-`TData` is the type of messages, which can be any serializable type. Examples of serializable types are:
+`TData` is the data type of the message, which can be any serializable type - practically any type. Examples of serializable types are:
 
 - `string`
 - `int`
 - `Vector3`
 - `Color`
 
-You can also add `[Serializable]` before a class to mark it as serializable.
+You must replace `TData` in the above example with the data type you want to use.
 
 :::tip NOTE
 This identifier will be shared between server and client messages of the mod.
