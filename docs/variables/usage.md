@@ -18,14 +18,12 @@ Using the constructor will create a server-owned variable, or if marked, a publi
 
 To make a new network variable, there are two pieces of information required: the `identifier` and the `type` of the variable.
 
-`TData` is the type of messages, which can be any serializable type. Examples of serializable types are:
+`TData` is the data type of the message, which can be any serializable type - practically any type. Examples of serializable types are:
 
 - `string`
 - `int`
 - `Vector3`
 - `Color`
-
-You can also add `[Serializable]` before a class to mark it as serializable.
 
 :::tip NOTE
 This identifier will be shared between all instances of network variables in the mod.
@@ -38,26 +36,32 @@ Any other mods with the same identifier or any messages or events of the same id
 Using the constructor is simple:
 
 ```csharp
-public static LethalNetworkVariable customVariable = new LethalNetworkVariable<TData>(identifier: "customIdentifier");
+public static LethalNetworkVariable<TData> customVariable = new LethalNetworkVariable<TData>(identifier: "customIdentifier");
 ```
 
 If you want to set a value to the network variable while initializing it, you can use object initializers:
 
 ```csharp
-public static LethalNetworkVariable customString = new LethalNetworkVariable<string>("customString") { Value = "Hello, World!" };
+public static LethalNetworkVariable<string> customString = new LethalNetworkVariable<string>("customString") { Value = "Hello, World!" };
 ```
 
 ### Helper Method
 
-You can use `.NetworkVariable<T>(identifier)` on any Network Object or Network Behaviour. This will create a new network variable owned by that object, or get the network variable if it already exists.
+You can use `.GetNetworkVariable<T>(identifier)` on any Network Object or Network Behaviour. This will create a new network variable owned by that object, or get the network variable if it already exists.
 
 ```csharp
 ForestGiantAI instance;
 
-LethalNetworkVariable<string> customString = instance.NetworkVariable<string>("customString");
+LethalNetworkVariable<string> customString = instance.GetNetworkVariable<string>("customString");
 ```
 
 Using this method, variable values will only sync if the host client has created an instance of the variable by using the method as well.
+
+:::tip
+If you specify `serverOwned = true` in the helper parameters, it'll define the variable as a server-owned variable and will only be available to be written to by the server.
+
+The `[PublicNetworkVariable]` is not applicable to the helper method.
+:::
 
 ### Ownership
 
@@ -65,7 +69,7 @@ As mentioned earlier, variables made with the constructor can be made public. It
 
 ```csharp
 [PublicNetworkVariable]
-public static LethalNetworkVariable customVariable = new LethalNetworkVariable<TData>(identifier: "customIdentifier");
+public static LethalNetworkVariable<TData> customVariable = new LethalNetworkVariable<TData>(identifier: "customIdentifier");
 ```
 
 Doing so will allow any client to modify the variable.

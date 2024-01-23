@@ -17,7 +17,7 @@ With either method, you must add the following before your `Plugin` class to ens
 Add the following line to your `.csproj` file:
 
 ```xml
-<PackageReference Include="Xilophor.LethalNetworkAPI" Version="1.*" PrivateAssets="all"/>
+<PackageReference Include="Xilophor.LethalNetworkAPI" Version="2.*" PrivateAssets="all"/>
 ```
 
 ## Via the `.dll` {#dll}
