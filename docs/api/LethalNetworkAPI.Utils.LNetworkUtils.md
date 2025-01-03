@@ -171,7 +171,7 @@ Returns {.h5}
 |:------|:--------------------------------|
 | `int` | The client's in-game player ID. |
 
-## Events                                                                                                                         |                                                                                   |
+## Events
 
 ### OnNetworkStart
 Called when the local client establishes a connection to, or starts up, a server.

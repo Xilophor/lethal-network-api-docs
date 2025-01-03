@@ -6,6 +6,12 @@ description: LethalNetworkAPI namespace docs.
 
 LethalNetworkAPI Namespace {.h2 .no-border .no-top .no-underline-link}
 
+## Namespaces
+
+&emsp;[Utils](/api/LethalNetworkAPI.Utils)
+
+&emsp;[Internal](/api/LethalNetworkAPI.Internal)
+
 ## Classes
 
 &emsp;[LethalNetworkAPIPlugin](/api/LethalNetworkAPI.LethalNetworkAPIPlugin)
