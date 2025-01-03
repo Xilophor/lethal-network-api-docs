@@ -21,21 +21,21 @@ LethalNetworkAPI Namespace {.h2 .no-border .no-top .no-underline-link}
 <br>&emsp;&emsp;A variable that can be used to send data between clients.
 
 :::details Deprecated
-&emsp;[LethalClientEvent](/api/LethalNetworkAPI.LethalClientEvent)
+&emsp;[LethalClientEvent](/api/deprecated/LethalNetworkAPI.LethalClientEvent)
 
-&emsp;[LethalClientMessage&lt;TData&gt;](/api/LethalNetworkAPI.LethalClientMessage)
+&emsp;[LethalClientMessage&lt;TData&gt;](/api/deprecated/LethalNetworkAPI.LethalClientMessage)
 
-&emsp;[LethalNetworkExtensions](/api/LethalNetworkAPI.LethalNetworkExtensions)
+&emsp;[LethalNetworkExtensions](/api/deprecated/LethalNetworkAPI.LethalNetworkExtensions)
 <br>&emsp;&emsp;Additional tools to help with networking.
 
-&emsp;[LethalNetworkVariable&lt;TData&gt;](/api/LethalNetworkAPI.LethalNetworkVariable)
+&emsp;[LethalNetworkVariable&lt;TData&gt;](/api/deprecated/LethalNetworkAPI.LethalNetworkVariable)
 
-&emsp;[LethalServerEvent](/api/LethalNetworkAPI.LethalServerEvent)
+&emsp;[LethalServerEvent](/api/deprecated/LethalNetworkAPI.LethalServerEvent)
 
-&emsp;[LethalServerMessage&lt;TData&gt;](/api/LethalNetworkAPI.LethalServerMessage)
+&emsp;[LethalServerMessage&lt;TData&gt;](/api/deprecated/LethalNetworkAPI.LethalServerMessage)
 
-&emsp;[PublicNetworkVariableAttribute](/api/LethalNetworkAPI.PublicNetworkVariableAttribute)
-<br>&emsp;&emsp;Declare [LethalNetworkVariable&lt;TData&gt;](/api/LethalNetworkAPI.LethalNetworkVariable) as public.
+&emsp;[PublicNetworkVariableAttribute](/api/deprecated/LethalNetworkAPI.PublicNetworkVariableAttribute)
+<br>&emsp;&emsp;Declare [LethalNetworkVariable&lt;TData&gt;](/api/deprecated/LethalNetworkAPI.LethalNetworkVariable) as public.
 :::
 
 ## Enums

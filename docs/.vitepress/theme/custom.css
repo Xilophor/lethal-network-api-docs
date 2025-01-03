@@ -49,6 +49,6 @@
     padding-top: 0!important;
 }
 
-.no-underline-link a {
+.no-underline-link, .no-underline-link a {
     text-decoration: none!important;
 }
