@@ -14,8 +14,8 @@ public class LethalNetworkAPIPlugin
 
 Inheritance {.h4}
 
-&#129106; [BepInEx.BaseUnityPlugin](https://docs.bepinex.dev/api/BepInEx.BaseUnityPlugin.html) 
-<br>&emsp;&#129106; LethalNetworkAPIPlugin
+&rdsh; [BepInEx.BaseUnityPlugin](https://docs.bepinex.dev/api/BepInEx.BaseUnityPlugin.html) 
+<br>&emsp;&rdsh; LethalNetworkAPIPlugin
 
 ## Properties
 

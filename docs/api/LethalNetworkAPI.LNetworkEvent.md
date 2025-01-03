@@ -14,8 +14,8 @@ public sealed class LNetworkEvent
 
 Inheritance {.h4}
 
-&#129106; [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') 
-<br>&emsp;&#129106; LNetworkEvent
+&rdsh; [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') 
+<br>&emsp;&rdsh; LNetworkEvent
 
 Remarks {.h3}
 

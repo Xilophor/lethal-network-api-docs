@@ -13,14 +13,12 @@ public sealed class LNetworkMessage<TData>
 ```
 Type Parameters {.h4}
 
-<a name='LethalNetworkAPI.LNetworkMessage_TData_.TData'></a>
-
 `TData` | The type of data to send.
 
 Inheritance {.h4}
 
-&#129106; [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object)
-<br>&emsp;&#129106; LNetworkMessage&lt;TData&gt;
+&rdsh; [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object)
+<br>&emsp;&rdsh; LNetworkMessage&lt;TData&gt;
 
 Remarks {.h3}
 

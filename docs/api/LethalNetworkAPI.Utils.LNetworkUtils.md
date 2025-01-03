@@ -12,8 +12,8 @@ public static class LNetworkUtils
 
 Inheritance {.h4}
 
-&#129106; [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')
-<br>&emsp;&#129106; LNetworkUtils
+&rdsh; [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')
+<br>&emsp;&rdsh; LNetworkUtils
 
 ## Properties
 
