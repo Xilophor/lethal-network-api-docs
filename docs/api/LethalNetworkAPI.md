@@ -1,7 +1,7 @@
 ---
 prev: false
 next: false
-description: LethalNetworkAPI namespace
+description: LethalNetworkAPI namespace docs.
 ---
 
 LethalNetworkAPI Namespace {.h2 .no-border .no-top .no-underline-link}
