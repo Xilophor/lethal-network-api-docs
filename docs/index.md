@@ -9,7 +9,10 @@ hero:
   tagline: Learn how to use the LethalNetworkAPI.
   actions:
     - theme: brand
+      text: Articles
+      link: /articles/overview
+    - theme: brand
       text: API Docs
-      link: /overview
+      link: /api/
 ---
 

@@ -1,0 +1,253 @@
+
+ul.VPDocOutlineItem.root li:has(ul.nested):has(a.active) > a {
+    color: var(--vp-c-text-1);
+}
+
+ul.VPDocOutlineItem.root {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+ul.VPDocOutlineItem.root::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -.6em 0 .3em 0 var(--vp-c-bg);
+    z-index: 100;
+}
+
+ul.VPDocOutlineItem.root li:has(ul.nested) {
+    display: flex;
+    flex-direction: column;
+    overflow-y: clip;
+}
+ul.VPDocOutlineItem.root li ul.nested {
+    transition: height 0.35s cubic-bezier(0, 1, 0.5, 1);
+}
+ul.VPDocOutlineItem.root li:not(:has(a.active)) ul.nested {
+    transition: height 0.35s cubic-bezier(0, 1, 0.5, 1);
+    height: 0!important;
+}
+
+.outline-marker {
+    display: none;
+}
+
+ul.VPDocOutlineItem.root li {
+    position: relative;
+}
+
+ul.VPDocOutlineItem.root > li::after {
+    content: "";
+    position: absolute;
+    top: calc(7px + 9px);
+    left: -17px;
+    width: 2px;
+    height: 0;
+    z-index: 0;
+    background-color: var(--vp-c-brand-1);
+    border-radius: 6px;
+    transition: height 0.25s cubic-bezier(0, 1, 0.5, 1), top 0.25s cubic-bezier(0, 1, 0.5, 1);
+}
+ul.VPDocOutlineItem.root > li:has(a.active)::after {
+    top: calc(7px);
+    width: 2px;
+    height: 18px;
+}
+
+ul.VPDocOutlineItem.root > li > ul.VPDocOutlineItem.nested > li::before {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    left: -17px;
+    width: 2px;
+    height: 0;
+    z-index: 0;
+    background-color: var(--vp-c-brand-1);
+    border-radius: 6px;
+    transition: all 0.25s cubic-bezier(0, 1, 0.5, 1);
+    rotate: 90deg;
+}
+ul.VPDocOutlineItem.root > li > ul.VPDocOutlineItem.nested > li:has(a.active)::before {
+    bottom: calc(16px * sin(45));
+    width: 2px;
+    height: 9px;
+    rotate: 135deg;
+}
+ul.VPDocOutlineItem.root > li > ul.VPDocOutlineItem.nested > li::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -17px;
+    width: 2px;
+    height: 0;
+    z-index: 0;
+    background-color: var(--vp-c-brand-1);
+    border-radius: 6px;
+    transition: all 0.25s cubic-bezier(0, 1, 0.5, 1);
+    rotate: 90deg;
+}
+ul.VPDocOutlineItem.root > li > ul.VPDocOutlineItem.nested > li:has(a.active)::after {
+    top: calc(16px * sin(45));
+    width: 2px;
+    height: 9px;
+    rotate: 45deg;
+}
+
+ul.VPDocOutlineItem.root li ul.nested:not(:has(*)) {
+    height: calc(32px * 0);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(1)) {
+    height: calc(32px * 1);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(2)) {
+    height: calc(32px * 2);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(3)) {
+    height: calc(32px * 3);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(4)) {
+    height: calc(32px * 4);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(5)) {
+    height: calc(32px * 5);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(6)) {
+    height: calc(32px * 6);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(7)) {
+    height: calc(32px * 7);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(8)) {
+    height: calc(32px * 8);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(9)) {
+    height: calc(32px * 9);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(10)) {
+    height: calc(32px * 10);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(11)) {
+    height: calc(32px * 11);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(12)) {
+    height: calc(32px * 12);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(13)) {
+    height: calc(32px * 13);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(14)) {
+    height: calc(32px * 14);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(15)) {
+    height: calc(32px * 15);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(16)) {
+    height: calc(32px * 16);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(17)) {
+    height: calc(32px * 17);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(18)) {
+    height: calc(32px * 18);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(19)) {
+    height: calc(32px * 19);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(20)) {
+    height: calc(32px * 20);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(21)) {
+    height: calc(32px * 21);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(22)) {
+    height: calc(32px * 22);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(23)) {
+    height: calc(32px * 23);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(24)) {
+    height: calc(32px * 24);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(25)) {
+    height: calc(32px * 25);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(26)) {
+    height: calc(32px * 26);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(27)) {
+    height: calc(32px * 27);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(28)) {
+    height: calc(32px * 28);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(29)) {
+    height: calc(32px * 29);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(30)) {
+    height: calc(32px * 30);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(31)) {
+    height: calc(32px * 31);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(32)) {
+    height: calc(32px * 32);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(33)) {
+    height: calc(32px * 33);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(34)) {
+    height: calc(32px * 34);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(35)) {
+    height: calc(32px * 35);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(36)) {
+    height: calc(32px * 36);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(37)) {
+    height: calc(32px * 37);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(38)) {
+    height: calc(32px * 38);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(39)) {
+    height: calc(32px * 39);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(40)) {
+    height: calc(32px * 40);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(41)) {
+    height: calc(32px * 41);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(42)) {
+    height: calc(32px * 42);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(43)) {
+    height: calc(32px * 43);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(44)) {
+    height: calc(32px * 44);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(45)) {
+    height: calc(32px * 45);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(46)) {
+    height: calc(32px * 46);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(47)) {
+    height: calc(32px * 47);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(48)) {
+    height: calc(32px * 48);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(49)) {
+    height: calc(32px * 49);
+}
+ul.VPDocOutlineItem.root li ul.nested:has(> :last-child:nth-child(50)) {
+    height: calc(32px * 50);
+}

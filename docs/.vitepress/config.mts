@@ -2,6 +2,19 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    vite: {
+        optimizeDeps: {
+            exclude: [
+                '@nolebase/vitepress-plugin-enhanced-readabilities/client',
+            ],
+        },
+        ssr: {
+            noExternal: [
+                '@nolebase/vitepress-plugin-highlight-targeted-heading',
+                '@nolebase/vitepress-plugin-enhanced-readabilities',
+            ],
+        },
+    },
     base: "/lethal-network-api-docs/",
     lang: 'en-US',
     title: "LethalNetworkAPI Wiki",
@@ -9,33 +22,62 @@ export default defineConfig({
     cleanUrls: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
+        externalLinkIcon: true,
+        outline: [2, 3],
+        
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'API Docs', link: '/overview' }
+            { text: 'Articles', link: '/articles/overview' },
+            { text: 'API Docs', link: '/api/' }
         ],
 
-        sidebar: [
-            { text: 'Referencing the API', link: '/overview' },
-            {
-                text: 'Network Messages',
-                items: [
-                    { text: 'Server Message', link: '/messages/server' },
-                    { text: 'Client Message', link: '/messages/client' }
-                ]
-            },
-            {
-                text: 'Network Events',
-                items: [
-                    { text: 'Server Event', link: '/events/server' },
-                    { text: 'Client Event', link: '/events/client' }
-                ]
-            },
-            { text: 'Network Variables', items: [
-                    { text: 'Usage', link: '/variables/usage' }
-                ]
-            },
-            { text: 'Extensions', link: '/extensions' },
-        ],
+        sidebar: {
+            '/': [
+                { text: 'Referencing the API', link: '/articles/overview' },
+                {
+                    text: 'Network Messages',
+                    items: [
+                        { text: 'Server Message', link: '/articles/messages/server' },
+                        { text: 'Client Message', link: '/articles/messages/client' }
+                    ]
+                },
+                {
+                    text: 'Network Events',
+                    items: [
+                        { text: 'Server Event', link: '/articles/events/server' },
+                        { text: 'Client Event', link: '/articles/events/client' }
+                    ]
+                },
+                { text: 'Network Variables', items: [
+                        { text: 'Usage', link: '/articles/variables/usage' }
+                    ]
+                },
+                { text: 'Extensions', link: '/articles/extensions' },
+            ],
+            '/api/': [
+                {
+                    items: [
+                        {
+                            text: 'LethalNetworkAPI', link: '/api/LethalNetworkAPI',
+                            collapsed: true,
+                            items: [
+                                { text: 'LethalNetworkAPIPlugin', link: '/api/LethalNetworkAPI.LethalNetworkAPIPlugin' },
+                                { text: 'LNetworkEvent', link: '/api/LethalNetworkAPI.LNetworkEvent' },
+                                { text: 'LNetworkMessage&lt;TData&gt;', link: '/api/LethalNetworkAPI.LNetworkMessage' },
+                                { text: 'LNetworkVariable&lt;TData&gt;', link: '/api/LethalNetworkAPI.LNetworkVariable' },
+                                { text: 'LNetworkVariableWritePerms', link: '/api/LethalNetworkAPI.LNetworkVariableWritePerms' },
+                                {
+                                    text: 'Utils', link: '/api/LethalNetworkAPI.Utils',
+                                    collapsed: true,
+                                    items: [
+                                        { text: 'LNetworkUtils', link: '/api/LethalNetworkAPI.Utils.LNetworkUtils' }
+                                    ]
+                                },
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
 
         socialLinks: [
             { icon: 'github', link: 'https://github.com/Xilophor/LethalNetworkAPI' },
