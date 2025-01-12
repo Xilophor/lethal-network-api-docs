@@ -224,6 +224,12 @@ Declaration {.h5}
 public event Action<ulong>? OnClientReceivedFromClient;
 ```
 
+Type Parameters {.h5}
+
+| Type    | Description           |
+|:--------|:----------------------|
+| `ulong` | The origin client ID. |
+
 ### OnServerReceived
 A callback that runs when the server receives an event.
 
@@ -232,3 +238,9 @@ Declaration {.h5}
 ```csharp
 public event Action<ulong>? OnServerReceived;
 ```
+
+Type Parameters {.h5}
+
+| Type    | Description           |
+|:--------|:----------------------|
+| `ulong` | The origin client ID. |

@@ -182,6 +182,8 @@ Declaration {.h5}
 public static event Action<bool> OnNetworkStart;
 ```
 
-Remarks {.h5}
+Type Parameters {.h5}
 
-Called with `bool` isServer.
+| Type   | Description                                    |
+|:-------|:-----------------------------------------------|
+| `bool` | Whether the local client is the server or not. |

@@ -14,7 +14,9 @@ public class LNetworkVariable<TData> : LethalNetworkAPI.Internal.LNetworkVariabl
 
 Type Parameters {.h4}
 
-`TData` | The type of data to send.
+| Type    | Description               |
+|:--------|:--------------------------|
+| `TData` | The type of data to send. |
 
 Inheritance {.h4}
 
@@ -188,3 +190,10 @@ Declaration {.h5}
 ```csharp
 public event Action<TData, TData>? OnValueChanged;
 ```
+
+Type Parameters {.h5}
+
+| Type    | Description         |
+|:--------|:--------------------|
+| `TData` | The previous value. |
+| `TData` | The new value.      |

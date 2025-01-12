@@ -13,7 +13,9 @@ public sealed class LNetworkMessage<TData>
 ```
 Type Parameters {.h4}
 
-`TData` | The type of data to send.
+| Type    | Description               |
+|:--------|:--------------------------|
+| `TData` | The type of data to send. |
 
 Inheritance {.h4}
 
@@ -242,6 +244,12 @@ Declaration {.h5}
 public event Action<TData>? OnClientReceived;
 ```
 
+Type Parameters {.h5}
+
+| Type    | Description        |
+|:--------|:-------------------|
+| `TData` | The received data. |
+
 ### OnClientReceivedFromClient
 A callback that runs when the client receives a message from another client.
 
@@ -251,6 +259,13 @@ Declaration {.h5}
 public event Action<TData, ulong>? OnClientReceivedFromClient;
 ```
 
+Type Parameters {.h5}
+
+| Type    | Description           |
+|:--------|:----------------------|
+| `TData` | The received data.    |
+| `ulong` | The origin client ID. |
+
 ### OnServerReceived
 A callback that runs when the server receives a message.
 
@@ -259,3 +274,10 @@ Declaration {.h5}
 ```csharp
 public event Action<TData, ulong>? OnServerReceived;
 ```
+
+Type Parameters {.h5}
+
+| Type    | Description           |
+|:--------|:----------------------|
+| `TData` | The received data.    |
+| `ulong` | The origin client ID. |
