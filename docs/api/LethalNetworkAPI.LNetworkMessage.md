@@ -20,7 +20,7 @@ Inheritance {.h4}
 &rdsh; [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object)
 <br>&emsp;&rdsh; LNetworkMessage&lt;TData&gt;
 
-Remarks {.h3}
+Remarks {.h4}
 
 Will not interact with [LNetworkEvent](/api/LethalNetworkAPI.LNetworkEvent), [LNetworkVariable&lt;TData&gt;](/api/LethalNetworkAPI.LNetworkVariable),  
 nor with other mods - even if the identifier is not unique.

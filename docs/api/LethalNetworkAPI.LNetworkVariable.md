@@ -22,7 +22,8 @@ Inheritance {.h4}
 <br>&emsp;&rdsh; [LNetworkVariableBase](/api/LethalNetworkAPI.Internal.LNetworkVariableBase)
 <br>&emsp;&emsp;&rdsh; LNetworkVariable&lt;TData&gt;
 
-### Remarks
+Remarks {.h4}
+
 The type should not be mutable, otherwise you will have to manually use [MakeDirty()](#makedirty) upon modification (e.g. add, remove) of the mutable value.
 
 ## Properties

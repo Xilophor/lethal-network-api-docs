@@ -1,7 +1,7 @@
 ---
 prev: false
 next: false
-description: How to reference and use LethalNetworkAPI.
+description: LethalNetworkAPI quick links for API Docs.
 ---
 
 # LethalNetworkAPI
@@ -12,11 +12,11 @@ Use the panel on the left to navigate class API documentation.
 
 ### LNetwork Classes
 
-- [LNetworkMessage](/api/LNetworkMessage)
-- [LNetworkEvent](/api/LNetworkEvent)
-- [LNetworkVariable](/api/LNetworkVariable)
+- [LNetworkMessage](/api/LethalNetworkAPI.LNetworkMessage)
+- [LNetworkEvent](/api/LethalNetworkAPI.LNetworkEvent)
+- [LNetworkVariable](/api/LethalNetworkAPI.LNetworkVariable)
 
-### Utils
+### Utils/Other Classes
 
-- [LNetworkUtils](/api/Utils.LNetworkUtils)
-- [LethalNetworkAPIPlugin](/api/LethalNetworkAPIPlugin)
+- [LNetworkUtils](/api/LethalNetworkAPI.Utils.LNetworkUtils)
+- [LethalNetworkAPIPlugin](/api/LethalNetworkAPI.LethalNetworkAPIPlugin)

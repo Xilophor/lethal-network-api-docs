@@ -17,12 +17,12 @@ Inheritance {.h4}
 &rdsh; [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') 
 <br>&emsp;&rdsh; LNetworkEvent
 
-Remarks {.h3}
+Remarks {.h4}
 
 Will not interact with [LNetworkMessage&lt;TData&gt;](/api/LethalNetworkAPI.LNetworkMessage), 
 [LNetworkVariable&lt;TData&gt;](/api/LethalNetworkAPI.LNetworkVariable), nor with other mods - even if the identifier is not unique.
 
-### Methods
+## Methods
 
 ### ClearSubscriptions()
 Clear all subscriptions to all callbacks on this <a class="no-underline-link">LNetworkEvent</a>.
