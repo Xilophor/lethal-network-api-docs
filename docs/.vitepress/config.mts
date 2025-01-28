@@ -32,7 +32,7 @@ export default defineConfig({
 
         sidebar: {
             '/': [
-                { text: 'Referencing the API', link: '/articles/overview' },
+                { text: 'Introduction & Basics', link: '/articles/' },
                 {
                     text: 'Network Messages',
                     items: [
