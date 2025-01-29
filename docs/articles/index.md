@@ -22,6 +22,14 @@ There are a few methods of referencing the LethalNetworkAPI package in your proj
 
 In your IDE, there should be some sort of "NuGet Package Manager" UI. In this UI, you can search for `Xilophor.LethalNetworkAPI` and find & install the package.
 
+For example, in Rider, if you once you open the NuGet Package Manager:
+
+![Toolbar to Open NuGet Package Manager](/articles/Rider_NuGet_Tools_UI.png)
+
+You can then search for the API and install it by pressing the highlighted button:
+
+![Install Package Button](/articles/Rider_NuGet_Install_Package.png)
+
 ### Via .csproj File
 
 Another way of adding the NuGet package is by adding a line into your `.csproj` file. All you need to add is the following line in a `<ItemGroup>` section:
