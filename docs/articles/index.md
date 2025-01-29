@@ -83,12 +83,12 @@ LNetworkVariable<string> ExampleVariable = LNetworkVariable<string>.Connect(iden
 ```
 
 ::: tip
-The identifiers are both unique to your mod, as well as each *type* of networked class - that is, a message with the identifier `"Test"` will not cause any collision with an event with the same identifier.
+The identifiers are both unique to your mod, and each *type* of networked class - that is, a message with the identifier `"Test"` will not cause any collision with an event with the same identifier.
 :::
 
 ### Linking a Method to the Message
 
-There are two ways of linking a method. You can either added it when creating the message, event, or variable; or subscribe after it's been created:
+There are two ways of linking a method. You can either add it when creating the message, event, or variable; or subscribe after it's been created:
 
 ```csharp
 // inside the creation method

@@ -82,5 +82,5 @@ private void ReceiveFromClient(ulong clientId)
 ```
 
 :::tip
-You can get the `PlayerControllerB` from a client Id by using the [`GetPlayer` extension method](/extensions#get-player-from-id).
+You can get the `PlayerControllerB` from a client Id by using the [`GetPlayer` extension method](/articles/v2/extensions#get-player-from-id).
 :::

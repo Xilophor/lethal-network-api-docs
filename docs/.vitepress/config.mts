@@ -26,32 +26,13 @@ export default defineConfig({
         outline: [2, 3],
         
         nav: [
-            { text: 'Articles', link: '/articles/overview' },
+            { text: 'Articles', link: '/articles/' },
             { text: 'API Docs', link: '/api/' }
         ],
 
         sidebar: {
-            '/': [
+            '/articles/': [
                 { text: 'Introduction & Basics', link: '/articles/' },
-                {
-                    text: 'Network Messages',
-                    items: [
-                        { text: 'Server Message', link: '/articles/messages/server' },
-                        { text: 'Client Message', link: '/articles/messages/client' }
-                    ]
-                },
-                {
-                    text: 'Network Events',
-                    items: [
-                        { text: 'Server Event', link: '/articles/events/server' },
-                        { text: 'Client Event', link: '/articles/events/client' }
-                    ]
-                },
-                { text: 'Network Variables', items: [
-                        { text: 'Usage', link: '/articles/variables/usage' }
-                    ]
-                },
-                { text: 'Extensions', link: '/articles/extensions' },
             ],
             '/api/': [
                 {
@@ -76,7 +57,29 @@ export default defineConfig({
                         }
                     ]
                 }
-            ]
+            ],
+            '/articles/v2/': [
+                { text: 'Referencing the API', link: '/articles/v2/overview' },
+                {
+                    text: 'Network Messages',
+                    items: [
+                        { text: 'Server Message', link: '/articles/v2/messages/server' },
+                        { text: 'Client Message', link: '/articles/v2/messages/client' }
+                    ]
+                },
+                {
+                    text: 'Network Events',
+                    items: [
+                        { text: 'Server Event', link: '/articles/v2/events/server' },
+                        { text: 'Client Event', link: '/articles/v2/events/client' }
+                    ]
+                },
+                { text: 'Network Variables', items: [
+                        { text: 'Usage', link: '/articles/v2/variables/usage' }
+                    ]
+                },
+                { text: 'Extensions', link: '/articles/v2/extensions' },
+            ],
         },
 
         socialLinks: [

@@ -100,7 +100,7 @@ There is a `OnValueChanged` event that runs when the value is changed. The follo
 - When a variable is updated over the network
   - This only happens every Network Tick; the following is taken (and adjusted) from [Unity's NGO docs](https://docs-multiplayer.unity3d.com/netcode/1.5.2/learn/rpcvnetvar/#choosing-between-networkvariables-or-rpcs).
 
-![NetworkVariable Network Tick Explanation](/public/variables/usage/networktick.png)
+![NetworkVariable Network Tick Explanation](/public/articles/v2/variables/usage/networktick.png)
 
 The `OnValueChanged` event is invoked with the parameter `TData data`, where `TData` is the type specified in the [constructor](#constructor).
 
