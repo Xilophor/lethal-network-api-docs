@@ -1,6 +1,6 @@
 ---
 prev: false
-next: false
+next: true
 description: Basic overview of LethalNetworkAPI.
 ---
 
