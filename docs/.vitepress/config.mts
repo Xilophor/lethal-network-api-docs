@@ -32,14 +32,37 @@ export default defineConfig({
 
         sidebar: {
             '/articles/': [
-                { text: 'Introduction & Basics', link: '/articles/' },
+                {
+                    text: 'Introduction',
+                    collapsed: false,
+                    items: [
+                        { text: 'Introduction & Basics', link: '/articles/' },
+                        { text: 'Glossary', link: '/articles/glossary' },
+                    ]
+                },
+                {
+                    text: 'Knowledge Base',
+                    collapsed: false,
+                    items: [
+                        { text: 'Network Events', link: '/articles/network-events' },
+                        { text: 'Network Messages', link: '/articles/network-messages' },
+                        { text: 'Network Variables', link: '/articles/network-variables' },
+                    ]
+                },
+                {
+                    text: 'Additional Info',
+                    collapsed: false,
+                    items: [
+                        { text: 'Serialization', link: '/articles/other/serialization' },
+                    ]
+                }
             ],
             '/api/': [
                 {
                     items: [
                         {
                             text: 'LethalNetworkAPI', link: '/api/LethalNetworkAPI',
-                            collapsed: true,
+                            collapsed: false,
                             items: [
                                 { text: 'LethalNetworkAPIPlugin', link: '/api/LethalNetworkAPI.LethalNetworkAPIPlugin' },
                                 { text: 'LNetworkEvent', link: '/api/LethalNetworkAPI.LNetworkEvent' },
