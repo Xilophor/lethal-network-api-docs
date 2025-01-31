@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Articles
-      link: /articles/overview
+      link: /articles/
     - theme: brand
       text: API Docs
       link: /api/

@@ -54,6 +54,7 @@ export default defineConfig({
                     collapsed: false,
                     items: [
                         { text: 'Serialization', link: '/articles/other/serialization' },
+                        { text: 'Troubleshooting', link: 'articles/other/troubleshooting' },
                     ]
                 }
             ],
