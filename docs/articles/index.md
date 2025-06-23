@@ -12,6 +12,8 @@ This is a brief installation and usage guide. For more specifics, look to the le
 If you are making a mod using .NET Framework (`net472`, `net48`, or `net481`), ensure that you do not copy the `LethalNetworkAPI.dll` from the bin folder - this dll is only to allow your mod to compile, but will not work in runtime. Instead, use the `netstandard2.1` version, available on [Thunderstore](https://thunderstore.io/c/lethal-company/p/xilophor/LethalNetworkAPI) or on [GitHub](https://github.com/Xilophor/LethalNetworkAPI/releases).
 :::
 
+<small>If you are looking for docs on the deprecated v2 classes and methods, you can go [here](/articles/v2/overview).</small>
+
 ## Referencing
 
 I recommend using the NuGet package manager. This will help keep your reference up-to-date, and will work with any GitHub workflows without any additional work.
@@ -42,7 +44,7 @@ Another way of adding the NuGet package is by adding a line into your `.csproj` 
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" PrivateAssets="all"/>
     <PackageReference Include="UnityEngine.Modules" Version="2022.3.9" PrivateAssets="all"/>
 
-    <PackageReference Include="Xilophor.LethalNetworkAPI" Version="3.*" PrivateAssets="all"/> // [!code focus]
+    <PackageReference Include="Xilophor.LethalNetworkAPI" Version="3.*" PrivateAssets="all"/> <!-- [!code ++] [!code focus] -->
 </ItemGroup>
 ```
 

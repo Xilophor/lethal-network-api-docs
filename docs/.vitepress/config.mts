@@ -2,19 +2,6 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    vite: {
-        optimizeDeps: {
-            exclude: [
-                '@nolebase/vitepress-plugin-enhanced-readabilities/client',
-            ],
-        },
-        ssr: {
-            noExternal: [
-                '@nolebase/vitepress-plugin-highlight-targeted-heading',
-                '@nolebase/vitepress-plugin-enhanced-readabilities',
-            ],
-        },
-    },
     base: "/lethal-network-api-docs/",
     lang: 'en-US',
     title: "LethalNetworkAPI Wiki",
@@ -40,21 +27,21 @@ export default defineConfig({
                         { text: 'Glossary', link: '/articles/glossary' },
                     ]
                 },
-                {
-                    text: 'Knowledge Base',
-                    collapsed: false,
-                    items: [
-                        { text: 'Network Events', link: '/articles/network-events' },
-                        { text: 'Network Messages', link: '/articles/network-messages' },
-                        { text: 'Network Variables', link: '/articles/network-variables' },
-                    ]
-                },
+                // {
+                //     text: 'Knowledge Base',
+                //     collapsed: false,
+                //     items: [
+                //         { text: 'Network Events', link: '/articles/network-events' },
+                //         { text: 'Network Messages', link: '/articles/network-messages' },
+                //         { text: 'Network Variables', link: '/articles/network-variables' },
+                //     ]
+                // },
                 {
                     text: 'Additional Info',
                     collapsed: false,
                     items: [
                         { text: 'Serialization', link: '/articles/other/serialization' },
-                        { text: 'Troubleshooting', link: 'articles/other/troubleshooting' },
+                        // { text: 'Troubleshooting', link: 'articles/other/troubleshooting' },
                     ]
                 }
             ],
