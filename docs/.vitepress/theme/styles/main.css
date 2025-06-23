@@ -1,0 +1,53 @@
+/* .vitepress/theme/custom.css */
+
+:root {
+    --vp-nolebase-highlight-targeted-heading-color: var(--vp-button-brand-hover-text)!important;
+    --vp-nolebase-highlight-targeted-heading-bg: var(--vp-button-brand-hover-bg)!important;
+}
+
+.vp-doc .h1, .vp-doc .h2, .vp-doc .h3, .vp-doc .h4, .vp-doc .h5, .vp-doc .h6 {
+    position: relative;
+    font-weight: 600;
+    outline: none;
+
+    margin: 0;
+    line-height: 24px;
+    font-size: 16px;
+}
+.vp-doc .h1 {
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-size: 32px;
+}
+.vp-doc .h2 {
+    margin: 48px 0 16px;
+    border-top: 1px solid var(--vp-c-divider);
+    padding-top: 24px;
+    letter-spacing: -0.02em;
+    line-height: 32px;
+    font-size: 24px;
+}
+.vp-doc .h3 {
+    margin: 32px 0 0;
+    letter-spacing: -0.01em;
+    line-height: 28px;
+    font-size: 20px;
+}
+.vp-doc .h4 {
+    margin: 24px 0 0;
+    letter-spacing: -0.01em;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+
+.no-border {
+    border: none!important;
+}
+.no-top {
+    margin-top: 0!important;
+    padding-top: 0!important;
+}
+.no-underline-link, .no-underline-link a {
+    text-decoration: none!important;
+}
